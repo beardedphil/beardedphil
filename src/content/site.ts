@@ -31,6 +31,11 @@ export const hero = {
   name: "Phil",
   nameAccent: "Bearded",
   role: "Senior engineer and builder — creating AI-augmented development systems that are inspectable, structured, and production-ready.",
+  /** Served from `public/` (Vite). */
+  avatar: {
+    src: "/phil-avatar.png",
+    alt: "Stylized portrait — Phil with a red beard, green glasses, and purple shirt",
+  },
   /** Shown at the top of the hero; update LinkedIn href if your public profile slug differs. */
   socialLinks: [
     {

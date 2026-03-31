@@ -42,20 +42,38 @@ function SocialLink({ cta }: { cta: CtaLink }) {
 export function HeroSection() {
   return (
     <section className="section hero fade-in-up">
-      <nav className="hero-social" aria-label="LinkedIn and GitHub">
-        {hero.socialLinks.map((c) => (
-          <SocialLink key={c.label} cta={c} />
-        ))}
-      </nav>
-      <h1 className="hero-name">
-        <span className="accent">{hero.nameAccent}</span>
-        {hero.name}
-      </h1>
-      <p className="hero-role">{hero.role}</p>
-      <div className="hero-ctas">
-        {hero.ctas.map((c) => (
-          <LinkButton key={c.label} cta={c} />
-        ))}
+      <div className="hero-layout">
+        <div className="hero-avatar-column">
+          <div className="hero-avatar-ring">
+            <div className="hero-avatar-inner">
+              <img
+                className="hero-avatar-img"
+                src={hero.avatar.src}
+                alt={hero.avatar.alt}
+                width={512}
+                height={512}
+                decoding="async"
+              />
+            </div>
+          </div>
+        </div>
+        <div className="hero-content-column">
+          <nav className="hero-social" aria-label="LinkedIn and GitHub">
+            {hero.socialLinks.map((c) => (
+              <SocialLink key={c.label} cta={c} />
+            ))}
+          </nav>
+          <h1 className="hero-name">
+            <span className="accent">{hero.nameAccent}</span>
+            {hero.name}
+          </h1>
+          <p className="hero-role">{hero.role}</p>
+          <div className="hero-ctas">
+            {hero.ctas.map((c) => (
+              <LinkButton key={c.label} cta={c} />
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );

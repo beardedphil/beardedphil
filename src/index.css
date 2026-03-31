@@ -109,10 +109,120 @@ body {
 
 .hero {
   position: relative;
-  padding-top: 6rem;
+  padding-top: 5rem;
   padding-bottom: 6rem;
   text-align: center;
   overflow: hidden;
+}
+
+.hero-layout {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: center;
+  max-width: 56rem;
+  margin: 0 auto;
+}
+
+.hero-avatar-column {
+  display: flex;
+  justify-content: center;
+}
+
+.hero-avatar-ring {
+  width: min(220px, 72vw);
+  padding: 4px;
+  border-radius: 50%;
+  background: linear-gradient(
+    145deg,
+    hsl(36, 72%, 58%),
+    hsl(280, 32%, 48%),
+    hsl(36, 48%, 40%)
+  );
+  box-shadow:
+    0 0 0 1px hsla(0, 0%, 100%, 0.08),
+    0 14px 36px hsla(0, 0%, 0%, 0.45),
+    0 0 52px hsla(36, 55%, 45%, 0.2);
+  animation: hero-avatar-float 6.5s ease-in-out infinite;
+}
+
+.hero-avatar-inner {
+  border-radius: 50%;
+  overflow: hidden;
+  background: #fff;
+  line-height: 0;
+}
+
+.hero-avatar-img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  display: block;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.hero-content-column {
+  min-width: 0;
+}
+
+@media (min-width: 768px) {
+  .hero-layout {
+    grid-template-columns: minmax(160px, 220px) 1fr;
+    gap: 2.5rem 3rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-avatar-column {
+    justify-content: stretch;
+  }
+
+  .hero-avatar-ring {
+    width: 100%;
+    max-width: 220px;
+    margin: 0 auto;
+  }
+
+  .hero-content-column {
+    text-align: center;
+  }
+
+  .hero-social {
+    justify-content: center;
+  }
+
+  .hero-ctas {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-social {
+    justify-content: center;
+  }
+
+  .hero-ctas {
+    justify-content: center;
+  }
+}
+
+@keyframes hero-avatar-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-avatar-ring {
+    animation: none;
+  }
 }
 
 .hero-social {
