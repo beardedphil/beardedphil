@@ -55,7 +55,7 @@ export const featured = {
   highlights: [
     "PM, Implementation, QA, and Process Review agents — all inspectable",
     "Full artifact trail: plans, worklogs, diffs, evidence per ticket",
-    "Tauri shell, bundled Ollama + NATS — local-first, no cloud required to run",
+    "Tauri shell, bundled NATS — engine services and UI on your desktop; agents reach models through a gateway (not a rented control plane)",
     "Outcome-based learning loop that tracks and correlates rule changes",
     "Real-time kanban UI with drag-and-drop, chat, and LLM monitoring",
   ],

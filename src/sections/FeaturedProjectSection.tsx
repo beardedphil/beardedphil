@@ -35,18 +35,26 @@ export function FeaturedProjectSection() {
         <div className="glass-card" style={{ alignSelf: "start" }}>
           <div className="glass-card-tag">stack</div>
           <p className="glass-card-desc" style={{ marginBottom: "0.75rem" }}>
-            Local-first orchestration: Tauri shell, bundled Ollama and NATS,
-            kanban UI, agent chat, and monitoring — the engine runs on your
-            machine without depending on a cloud control plane.
+            Desktop stack: Tauri shell, bundled NATS, kanban UI, agent chat, and
+            monitoring — the engine runs on your machine; there is no separate
+            cloud dashboard or control plane.
           </p>
           <p className="glass-card-desc" style={{ marginBottom: "0.75rem" }}>
-            Agents still{" "}
+            Agents{" "}
             <strong style={{ color: "var(--text-primary)", fontWeight: 600 }}>
               call out to LLMs
             </strong>{" "}
-            for planning and execution — local models through Ollama, hosted
-            APIs when you configure them — with traffic and responses surfaced
-            in the UI.
+            for planning and execution, with traffic surfaced in the UI. The{" "}
+            <strong style={{ color: "var(--text-primary)", fontWeight: 600 }}>
+              implementation
+            </strong>{" "}
+            agent currently expects{" "}
+            <strong style={{ color: "var(--text-primary)", fontWeight: 600 }}>
+              hosted / cloud-accessible
+            </strong>{" "}
+            models — local models (e.g. Ollama) for that path are not supported
+            yet. Other features may still use a local Ollama instance when you
+            configure one.
           </p>
           <p
             className="glass-card-desc"
