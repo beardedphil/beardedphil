@@ -31,10 +31,22 @@ export const hero = {
   name: "Phil",
   nameAccent: "Bearded",
   role: "Senior engineer and builder — creating AI-augmented development systems that are inspectable, structured, and production-ready.",
+  /** Shown at the top of the hero; update LinkedIn href if your public profile slug differs. */
+  socialLinks: [
+    {
+      label: "LinkedIn",
+      href: "https://www.linkedin.com/in/beardedphil",
+      external: true,
+    },
+    {
+      label: "GitHub",
+      href: "https://github.com/beardedphil",
+      external: true,
+    },
+  ] satisfies CtaLink[],
   ctas: [
     { label: "Watch Demo", href: "#demo", primary: true },
     { label: "Documentation", href: "#documentation" },
-    { label: "GitHub", href: "https://github.com/beardedphil", external: true },
   ] satisfies CtaLink[],
 };
 
