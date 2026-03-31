@@ -44,6 +44,11 @@ export const hero = {
       external: true,
     },
     {
+      label: "Resume",
+      href: "/philip-king-resume.pdf",
+      external: true,
+    },
+    {
       label: "GitHub",
       href: "https://github.com/beardedphil",
       external: true,
